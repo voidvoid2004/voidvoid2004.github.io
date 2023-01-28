@@ -18,7 +18,7 @@
 <meta property="og:description" content="快速排序  快速排序是一种交换排序，交换就是根据序列中的两个记录键值的比较结果来兑换这两个记录在序列中的位置，交换排序的特点是：将键值较大的记录向序列的尾部移动，键值较小的记录向序列的前部移动。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2023-01-26T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-01-27T12:27:18.752Z">
+<meta property="article:modified_time" content="2023-01-27T12:33:51.246Z">
 <meta property="article:author" content="voidvoid2004">
 <meta property="article:tag" content="算法">
 <meta property="article:tag" content="排序">
@@ -195,7 +195,7 @@
     
     <h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><p>  快速排序是一种交换排序，交换就是根据序列中的两个记录键值的比较结果来兑换这两个记录在序列中的位置，交换排序的特点是：将键值较大的记录向序列的尾部移动，键值较小的记录向序列的前部移动。</p>
 <span id="more"></span>
-<p>  快速排序是Hoare于1962年提出的一种二叉树结构的交换排序方法，其基本思想为：任取待排序元素序列中的某元素作为基准值，按照该排序码将待排序集合分割成两子序列，左子序列中所有元素均小于基准值，右子序列中所有元素均大于基准值，然后最左右子序列重复该过程，直到所有元素都排列在相应位置上为止。<br>代码:</p>
+<p>  快速排序是Hoare于1962年提出的一种二叉树结构的交换排序方法，其基本思想为：任取待排序元素序列中的某元素作为基准值，按照该排序码将待排序集合分割成两子序列，左子序列中所有元素均小于基准值，右子序列中所有元素均大于基准值，然后最左右子序列重复该过程，直到所有元素都排列在相应位置上为止。<br>代码 :</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">const int N =100010;</span><br><span class="line">int a[N];</span><br><span class="line">void quick_sort(int a[],int l,int r)</span><br><span class="line">&#123;</span><br><span class="line">	if(l&gt;=r)return;</span><br><span class="line">	int i = l-1,j=r+1,x=a[l+r&gt;&gt;1];</span><br><span class="line">	while(i&lt;j)</span><br><span class="line">	&#123;</span><br><span class="line">		do i++;while(a[i]&lt;x);</span><br><span class="line">		do j--;while(a[j]&gt;x);</span><br><span class="line">		if(i&lt;j)swap(a[i],a[j]);</span><br><span class="line">	&#125;</span><br><span class="line">	quick_sort(a,l,j);</span><br><span class="line">	quick_sort(a,j+1,r);</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	cin&gt;&gt;n;</span><br><span class="line">	for(int i = 0;i&lt;n;i++)</span><br><span class="line">		cin&gt;&gt;a[i];</span><br><span class="line">	quick_sort(a,0,n-1);</span><br><span class="line">	for(int i = 0;i&lt;n;i++)</span><br><span class="line">		cout&lt;&lt;a[i]&lt;&lt;&#x27; &#x27;;</span><br><span class="line">	return 0;</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
@@ -335,6 +335,15 @@
 
 
 <nav id="article-nav">
+  
+    <a href="/2023/01/28/2023-1-28-python%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AF%BC%E5%85%A5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          python模块的导入
+        
+      </div>
+    </a>
   
   
     <a href="/2023/01/24/2023-01-24-typora%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
@@ -509,6 +518,10 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">排序</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">python</a>
               </li>
             
             <div class="clearfix"></div>
