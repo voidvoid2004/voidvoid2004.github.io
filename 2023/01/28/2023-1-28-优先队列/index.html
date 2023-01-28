@@ -6,16 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives: 2023/1 | voidvoid2004的个人博客</title>
+  <title>优先队列 | voidvoid2004的个人博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="voidvoid2004的个人博客">
-<meta property="og:url" content="http://example.com/archives/2023/01/index.html">
+  <meta name="description" content="优先队列一、优先队列的原理及使用优先队列 (priority queue) 是0个或多个元素的集合，每个元素都有一个优先权或值,优先队列执行的操作有1: 查找;  2: 插入一个新元素  3: 删除。在最小优先队列(min priority queue)中，查找操作用来搜索优先权最小的元素，删除操作用来删除该元素;对于最大优先队列(max priority queue),查找操作用来搜索优先权最大">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优先队列">
+<meta property="og:url" content="http://example.com/2023/01/28/2023-1-28-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/index.html">
 <meta property="og:site_name" content="voidvoid2004的个人博客">
+<meta property="og:description" content="优先队列一、优先队列的原理及使用优先队列 (priority queue) 是0个或多个元素的集合，每个元素都有一个优先权或值,优先队列执行的操作有1: 查找;  2: 插入一个新元素  3: 删除。在最小优先队列(min priority queue)中，查找操作用来搜索优先权最小的元素，删除操作用来删除该元素;对于最大优先队列(max priority queue),查找操作用来搜索优先权最大">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-01-27T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-01-28T08:00:26.859Z">
 <meta property="article:author" content="voidvoid2004">
+<meta property="article:tag" content="算法">
+<meta property="article:tag" content="STL">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="voidvoid2004的个人博客" type="application/atom+xml">
@@ -134,41 +140,150 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2023-1-28-优先队列" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/28/2023-1-28-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" class="archive-article-date">
-        <time datetime="2023-01-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-28</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/28/2023-1-28-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" target="_blank">优先队列</a>
   
+    <h1 class="article-title" itemprop="name">
+      优先队列
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2023/01/28/2023-1-28-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" class="archive-article-date">
+        <time datetime="2023-01-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-28</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.6k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">6分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h2 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h2><h3 id="一、优先队列的原理及使用"><a href="#一、优先队列的原理及使用" class="headerlink" title="一、优先队列的原理及使用"></a>一、<a target="_blank" rel="noopener" href="https://so.csdn.net/so/search?q=%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97&spm=1001.2101.3001.7020">优先队列</a>的原理及使用</h3><p>优先队列 (priority queue) 是0个或多个元素的集合，每个元素都有一个优先权或值,优先队列执行的操作有1: 查找;  2: 插入一个新元素  3: 删除。在最小优先队列(min priority queue)中，查找操作用来搜索优先权最小的元素，删除操作用来删除该元素;对于最大优先队列(max priority queue),查找操作用来搜索优先权最大的元素，删除操作用来删除该元素。优先权队列中的元素可以有相同的优先权，查找与删除操作可根据任意优先权进行。</p>
+<span id="more"></span>
+<p>普通的队列是一种先进先出的数据结构，元素在队列尾追加，而从队列头删除。在优先队列中，元素被赋予优先级。当访问元素时，具有最高优先级的元素最先删除。优先队列具有最高级先出 (first in,largest out)的行为特征。通常采用堆数据结构来实现。</p>
+<p>std::priority_queue:在优先队列中，优先级高的元素先出队列，并非按照先进先出的要求，类似一个堆(heap)。其模板声明带有三个参数，priority_queue&lt;Type, Container, Functional&gt;, 其中Type为数据类型，Container为保存数据的容器，Functional为元素比较方式。Container必须是用数组实现的容器，比如 vector, deque. STL里面默认用的是vector. 比较方式默认用operator&lt; , 所以如果把后面两个参数缺省的话，优先队列就是大顶堆，队头元素最大。</p>
+<p><strong>priority_queue()，默认按照从小到大排列。所以top()返回的是最大值而不是最小值！</strong></p>
+<p><strong>使用greater&lt;&gt;后，数据从大到小排列，top()返回的就是最小值而不是最大值！</strong></p>
+<p><strong>如果使用了第三个参数，那第二个参数不能省，用作保存数据的容器！！！！</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;int, greater&lt;&gt;&gt; pq;//这是错误的</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">priority_queue&lt;int,vector&lt;int&gt; , greater&lt;&gt;&gt; pq;//这是对的</span><br></pre></td></tr></table></figure>
+
+<p>这里再提一嘴，greater<int>与greater<int>() 的区别，这要根据函数原型要求参数是函数对象类型还是要求参数是结构类型。greater<int> 对应于结构的类型，greater&lt; int&gt;()对应于没有参数且返回类型更大的函数的类型。比如multimap中使用不带括号的，sort使用带括号的。</p>
+<h3 id="二、基本操作"><a href="#二、基本操作" class="headerlink" title="二、基本操作"></a>二、基本操作</h3><p>优先队列在头文件#include <queue>中；</p>
+<p>其声明格式为：priority_queue <int> ans;&#x2F;&#x2F;声明一个名为ans的整形的优先队列</p>
+<p>基本操作有：</p>
+<p>empty( )  &#x2F;&#x2F;判断一个队列是否为空</p>
+<p>pop( )  &#x2F;&#x2F;删除队顶元素</p>
+<p>push( )  &#x2F;&#x2F;加入一个元素</p>
+<p>size( )  &#x2F;&#x2F;返回优先队列中拥有的元素个数</p>
+<p>top( )  &#x2F;&#x2F;返回优先队列的队顶元素</p>
+<p>优先队列的时间复杂度为O（logn），n为队列中元素的个数，其存取都需要时间。</p>
+<h3 id="三、排序"><a href="#三、排序" class="headerlink" title="三、排序"></a>三、排序</h3><p>默认的优先队列是个极大堆，如果要改变优先队列中元素的优先级，有下面这些方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">struct cmp1  </span><br><span class="line">&#123;    </span><br><span class="line">    bool operator ()(int &amp;a,int &amp;b)  </span><br><span class="line">    &#123;    </span><br><span class="line">        return a&gt;b;//最小值优先     </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;;    </span><br><span class="line">struct cmp2  </span><br><span class="line">&#123;    </span><br><span class="line">    bool operator ()(int &amp;a,int &amp;b)  </span><br><span class="line">    &#123;    </span><br><span class="line">        return a&lt;b;//最大值优先     </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;;    </span><br><span class="line">struct node1  </span><br><span class="line">&#123;    </span><br><span class="line">    int u;    </span><br><span class="line">    bool operator &lt; (const node1 &amp;a) const   </span><br><span class="line">    &#123;    </span><br><span class="line">       return u&gt;a.u;//最小值优先     </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;;    </span><br><span class="line">struct node2  </span><br><span class="line">&#123;    </span><br><span class="line">    int u;    </span><br><span class="line">    bool operator &lt; (const node2 &amp;a) const   </span><br><span class="line">    &#123;    </span><br><span class="line">        return u&lt;a.u;//最大值优先     </span><br><span class="line">    &#125;    </span><br><span class="line">&#125;;   </span><br><span class="line">  </span><br><span class="line">priority_queue&lt;int&gt;q1;//采用默认优先级构造队列       </span><br><span class="line">priority_queue&lt;int,vector&lt;int&gt;,cmp1&gt;q2;//最小值优先     </span><br><span class="line">priority_queue&lt;int,vector&lt;int&gt;,cmp2&gt;q3;//最大值优先     </span><br><span class="line">priority_queue&lt;int,vector&lt;int&gt;,greater&lt;int&gt; &gt;q4;//注意“&gt;&gt;”会被认为错误，     </span><br><span class="line">                                                //这是右移运算符，所以这里用空格号隔开,最小值优先   </span><br><span class="line">priority_queue&lt;int,vector&lt;int&gt;,less&lt;int&gt; &gt;q5;//最大值优先      </span><br><span class="line">priority_queue&lt;node1&gt;q6;  //自定义优先级  </span><br><span class="line">priority_queue&lt;node2&gt;q7;</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、例题"><a href="#四、例题" class="headerlink" title="四、例题"></a>四、例题</h3><p>题目<br>看病要排队这个是地球人都知道的常识。<br>不过经过细心的0068的观察，他发现了医院里排队还是有讲究的。0068所去的医院有三个医生（汗，这么少）同时看病。而看病的人病情有轻重，所以不能根据简单的先来先服务的原则。所以医院对每种病情规定了10种不同的优先级。级别为10的优先权最高，级别为1的优先权最低。医生在看病时，则会在他的队伍里面选择一个优先权最高的人进行诊治。如果遇到两个优先权一样的病人的话，则选择最早来排队的病人。</p>
+<p>现在就请你帮助医院模拟这个看病过程。</p>
+<p>Input<br>输入数据包含多组测试，请处理到文件结束。<br>每组数据第一行有一个正整数N(0&lt;N&lt;2000)表示发生事件的数目。<br>接下来有N行分别表示发生的事件。<br>一共有两种事件：<br>1:“IN A B”,表示有一个拥有优先级B的病人要求医生A诊治。(0&lt;A&lt;&#x3D;3,0&lt;B&lt;&#x3D;10)<br>2:“OUT A”,表示医生A进行了一次诊治，诊治完毕后，病人出院。(0&lt;A&lt;&#x3D;3)</p>
+<p>Output<br>对于每个”OUT A”事件，请在一行里面输出被诊治人的编号ID。如果该事件时无病人需要诊治，则输出”EMPTY”。<br>诊治人的编号ID的定义为：在一组测试中，”IN A B”事件发生第K次时，进来的病人ID即为K。从1开始编号。</p>
+<p>Sample Input<br>7<br>IN 1 1<br>IN 1 2<br>OUT 1<br>OUT 2<br>IN 2 1<br>OUT 2<br>OUT 1<br>2<br>IN 1 1<br>OUT 1</p>
+<p>Sample Output<br>2<br>EMPTY<br>3<br>1<br>1</p>
+<p>代码:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;iostream&gt;</span><br><span class="line">#include&lt;queue&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">struct pat&#123;</span><br><span class="line">	int priority,num,data;</span><br><span class="line">&#125;p;</span><br><span class="line">bool operator &lt; (const pat&amp; a,const pat&amp; b)</span><br><span class="line">&#123;</span><br><span class="line">	if(a.priority==b.priority)return a.data&gt;b.data;</span><br><span class="line">	return a.priority&lt;b.priority;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int n;</span><br><span class="line">	string str;</span><br><span class="line">	while(cin&gt;&gt;n)</span><br><span class="line">	&#123;</span><br><span class="line">		int k = 1;</span><br><span class="line">		priority_queue&lt;pat&gt;que[5];</span><br><span class="line">		while(n--)</span><br><span class="line">		&#123;</span><br><span class="line">			cin&gt;&gt;str;</span><br><span class="line">			if(str==&quot;IN&quot;)</span><br><span class="line">			&#123;</span><br><span class="line">				cin&gt;&gt;p.num&gt;&gt;p.priority;</span><br><span class="line">				p.data=k++;</span><br><span class="line">				que[p.num].push(p);</span><br><span class="line">			&#125;</span><br><span class="line">			else</span><br><span class="line">			&#123;</span><br><span class="line">				int nu;</span><br><span class="line">				cin&gt;&gt;nu;</span><br><span class="line">				if(!que[nu].empty())</span><br><span class="line">				&#123;</span><br><span class="line">					cout&lt;&lt;que[nu].top().data&lt;&lt;endl;</span><br><span class="line">					que[nu].pop();</span><br><span class="line">				&#125;</span><br><span class="line">				else</span><br><span class="line">				&#123;</span><br><span class="line">					cout&lt;&lt;&quot;EMPTY&quot;&lt;&lt;endl;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          voidvoid2004
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2023/01/28/2023-1-28-优先队列/" title="优先队列" target="_blank">http://example.com/2023/01/28/2023-1-28-优先队列/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -184,195 +299,107 @@
 		</ul>
 	</div>
 
-          
+    
 
+    
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/01/28/2023-1-28-%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/28/2023-1-28-python%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AF%BC%E5%85%A5/" class="archive-article-date">
-        <time datetime="2023-01-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-28</time>
-</a>
 
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/01/28/2023-1-28-python%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AF%BC%E5%85%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python模块的导入</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/28/2023-1-28-python%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AF%BC%E5%85%A5/" target="_blank">python模块的导入</a>
-  
-    </h1>
-  
+        
+        
+    </div>
+</aside>
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/27/2023-1-27-%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-        <time datetime="2023-01-26T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-27</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/27/2023-1-27-%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/" target="_blank">快速排序</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">算法</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">排序</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/24/2023-1-24-typora%E8%BF%9B%E9%98%B6/" class="archive-article-date">
-        <time datetime="2023-01-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-24</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/24/2023-1-24-typora%E8%BF%9B%E9%98%B6/" target="_blank">typora进阶</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">typora</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/24/2023-01-24-typora%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="archive-article-date">
-        <time datetime="2023-01-23T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-24</time>
-</a>
-
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/24/2023-01-24-typora%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" target="_blank">typora使用方法</a>
-  
-    </h1>
-  
 
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">typora</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
 
 
           </div>
@@ -413,8 +440,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
