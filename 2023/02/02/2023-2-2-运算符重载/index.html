@@ -6,17 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Tag: python | voidvoid2004的个人博客</title>
+  <title>运算符重载 | voidvoid2004的个人博客</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="voidvoid2004的个人博客">
-<meta property="og:url" content="http://example.com/tags/python/index.html">
+  <meta name="description" content="1 C++运算符重载的概念和原理如果不做特殊处理，C++ 的 +、-、*、&#x2F; 等运算符只能用于对基本类型的常量或变量进行运算，不能用于对象之间的运算。 有时希望对象之间也能用这些运算符进行运算，以达到使程序更简洁、易懂的目的。例如，复数是可以进行四则运算的，两个复数对象相加如果能直接用+运算符完成，不是很直观和简洁吗？ 利用 C++ 提供的“运算符重载”机制，赋予运算符新的功能，就能解决">
+<meta property="og:type" content="article">
+<meta property="og:title" content="运算符重载">
+<meta property="og:url" content="http://example.com/2023/02/02/2023-2-2-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/index.html">
 <meta property="og:site_name" content="voidvoid2004的个人博客">
+<meta property="og:description" content="1 C++运算符重载的概念和原理如果不做特殊处理，C++ 的 +、-、*、&#x2F; 等运算符只能用于对基本类型的常量或变量进行运算，不能用于对象之间的运算。 有时希望对象之间也能用这些运算符进行运算，以达到使程序更简洁、易懂的目的。例如，复数是可以进行四则运算的，两个复数对象相加如果能直接用+运算符完成，不是很直观和简洁吗？ 利用 C++ 提供的“运算符重载”机制，赋予运算符新的功能，就能解决">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="c:\Users\%E5%88%98\blog\source\img\20181226215243470">
+<meta property="article:published_time" content="2023-02-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-02-02T02:10:57.009Z">
 <meta property="article:author" content="voidvoid2004">
+<meta property="article:tag" content="c++">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:\Users\%E5%88%98\blog\source\img\20181226215243470">
   
     <link rel="alternative" href="/atom.xml" title="voidvoid2004的个人博客" type="application/atom+xml">
   
@@ -134,65 +141,415 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-2023-2-2-运算符重载" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2023" class="archive-year">2023</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-<a href="/2023/01/28/2023-1-28-python%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AF%BC%E5%85%A5/" class="archive-article-date">
-        <time datetime="2023-01-27T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-01-28</time>
-</a>
-
-        </div>
-    	 
+      <header class="article-header">
   
-    <h1 itemprop="name">
-	
-	  <a class="archive-article-title" href="/2023/01/28/2023-1-28-python%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AF%BC%E5%85%A5/" target="_blank">python模块的导入</a>
   
+    <h1 class="article-title" itemprop="name">
+      运算符重载
     </h1>
   
 
 
-        <div class="article-info info-on-right">
+  
+  
+        
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+<a href="/2023/02/02/2023-2-2-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" class="archive-article-date">
+        <time datetime="2023-02-01T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-02-02</time>
+</a>
+
+  
+  
+    
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">8.1k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">33分</span>
+    </span>
+  </span>
+</div>
+
+
+  
+  </header>
+  
+  <div class="article-entry" itemprop="articleBody">
+    
+    <h3 id="1-C-运算符重载的概念和原理"><a href="#1-C-运算符重载的概念和原理" class="headerlink" title="1 C++运算符重载的概念和原理"></a>1 C++运算符重载的概念和原理</h3><p>如果不做特殊处理，C++ 的 +、-、*、&#x2F; 等运算符只能用于对基本类型的常量或变量进行运算，不能用于对象之间的运算。</p>
+<p>有时希望对象之间也能用这些运算符进行运算，以达到使程序更简洁、易懂的目的。例如，复数是可以进行四则运算的，两个复数对象相加如果能直接用+运算符完成，不是很直观和简洁吗？</p>
+<p>利用 C++ 提供的“运算符重载”机制，赋予运算符新的功能，就能解决用+将两个复数对象相加这样的问题。</p>
+<span id="more"></span>
+
+<p>运算符重载，就是对已有的运算符赋予多重含义，使同一运算符作用于不同类型的数据时产生不同的行为。运算符重载的目的是使得 C++ 中的运算符也能够用来操作对象。</p>
+<p>运算符重载的实质是编写以运算符作为名称的函数。不妨把这样的函数称为运算符函数。运算符函数的格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">返回值类型  operator  运算符(形参表)</span><br><span class="line">&#123;</span><br><span class="line">    ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>包含被重载的运算符的表达式会被编译成对运算符函数的调用，运算符的操作数成为函数调用时的实参，运算的结果就是函数的返回值。运算符可以被多次重载。</p>
+<p>运算符可以被重载为全局函数，也可以被重载为成员函数。一般来说，倾向于将运算符重载为成员函数，这样能够较好地体现运算符和类的关系。来看下面的例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class Complex</span><br><span class="line">&#123;</span><br><span class="line">    public:</span><br><span class="line">    double real, imag;</span><br><span class="line">    Complex(double r = 0.0, double i = 0.0) : real(r), imag(i) &#123; &#125;</span><br><span class="line">    Complex operator - (const Complex &amp; c);</span><br><span class="line">&#125;;</span><br><span class="line">Complex operator + (const Complex &amp; a, const Complex &amp; b)</span><br><span class="line">&#123;</span><br><span class="line">    return Complex(a.real + b.real, a.imag + b.imag); //返回一个临时对象</span><br><span class="line">&#125;</span><br><span class="line">Complex Complex::operator - (const Complex &amp; c)</span><br><span class="line">&#123;</span><br><span class="line">    return Complex(real - c.real, imag - c.imag); //返回一个临时对象</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    Complex a(4, 4), b(1, 1), c;</span><br><span class="line">    c = a + b; //等价于 c = operator + (a,b);</span><br><span class="line">    cout &lt;&lt; c.real &lt;&lt; &quot;,&quot; &lt;&lt; c.imag &lt;&lt; endl;</span><br><span class="line">    cout &lt;&lt; (a - b).real &lt;&lt; &quot;,&quot; &lt;&lt; (a - b).imag &lt;&lt; endl; //a-b等价于a.operator - (b)</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序的输出结果是：</p>
+<p><strong>5,5</strong><br><strong>3,3</strong></p>
+<p>程序将+重载为一个全局函数（只是为了演示这种做法，否则重载为成员函数更好），将-重载为一个成员函数。</p>
+<p>运算符重载为全局函数时，参数的个数等于运算符的目数（即操作数的个数）；运算符重载为成员函数时，参数的个数等于运算符的目数减一。</p>
+<p>如果+没有被重载，第 21 行会编译出错，因为编译器不知道如何对两个 Complex 对象进行+运算。有了对+的重载，编译器就将a+b理解为对运算符函数的调用，即operator+(a,b)，因此第 21 行就等价于：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c = operator+(a, b);</span><br></pre></td></tr></table></figure>
+
+<p>即以两个操作数 a、b 作为参数调用名为operator+的函数，并将返回值赋值给 c。</p>
+<p>第 12 行，在 C++ 中，“类名（构造函数实参表）”这种写法表示生成一个临时对象。该临时对象没有名字，生存期就到包含它的语句执行完为止。因此，第 12 行实际上生成了一个临时的 Complex 对象作为 return 语句的返回值，该临时对象被初始化为 a、b 之和。第 16 行与第 12 行类似。</p>
+<p>由于-被重载为 Complex 类的成员函数，因此，第 23 行中的a-b就被编译器处理成：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.operator-(b);</span><br></pre></td></tr></table></figure>
+
+<p>由此就能看出，为什么运算符重载为成员函数时，参数个数要比运算符目数少 1 了。</p>
+<h3 id="2-C-重载-x3D-（C-重载赋值运算符）"><a href="#2-C-重载-x3D-（C-重载赋值运算符）" class="headerlink" title="2 C++重载&#x3D;（C++重载赋值运算符）"></a>2 C++重载&#x3D;（C++重载赋值运算符）</h3><p>赋值运算符&#x3D;要求左右两个操作数的类型是匹配的，或至少是兼容的。有时希望&#x3D;两边的操作数的类型即使不兼容也能够成立，这就需要对&#x3D;进行重载。C++ 规定，&#x3D;只能重载为成员函数。来看下面的例子。</p>
+<p>要编写一个长度可变的字符串类 String，该类有一个 char* 类型的成员变量，用以指向动态分配的存储空间，该存储空间用来存放以\0结尾的字符串。String 类可以如下编写：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class String &#123;</span><br><span class="line">private:</span><br><span class="line">    char * str;</span><br><span class="line">public:</span><br><span class="line">    String() :str(NULL) &#123; &#125;</span><br><span class="line">    const char * c_str() const &#123; return str; &#125;;</span><br><span class="line">    String &amp; operator = (const char * s);</span><br><span class="line">    ~String();</span><br><span class="line">&#125;;</span><br><span class="line">String &amp; String::operator = (const char * s)</span><br><span class="line">//重载&quot;=&quot;以使得 obj = &quot;hello&quot;能够成立</span><br><span class="line">&#123;</span><br><span class="line">    if (str)</span><br><span class="line">        delete[] str;</span><br><span class="line">    if (s) &#123; //s不为NULL才会执行拷贝</span><br><span class="line">        str = new char[strlen(s) + 1];</span><br><span class="line">        strcpy(str, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">        str = NULL;</span><br><span class="line">    return *this;</span><br><span class="line">&#125;</span><br><span class="line">String::~String()</span><br><span class="line">&#123;</span><br><span class="line">    if (str)</span><br><span class="line">        delete[] str;</span><br><span class="line">&#125;;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    String s;</span><br><span class="line">    s = &quot;Good Luck,&quot;; //等价于 s.operator=(&quot;Good Luck,&quot;);</span><br><span class="line">    cout &lt;&lt; s.c_str() &lt;&lt; endl;</span><br><span class="line">    // String s2 = &quot;hello!&quot;; //这条语句要是不注释掉就会出错</span><br><span class="line">    s = &quot;Shenzhou 8!&quot;; //等价于 s.operator=(&quot;Shenzhou 8!&quot;);</span><br><span class="line">    cout &lt;&lt; s.c_str() &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>程序的运行结果：</p>
+<p><strong>Good Luck,</strong><br><strong>Shenzhou 8!</strong></p>
+<p>第 8 行的构造函数将 str 初始化为 NULL，仅当执行了 operator&#x3D; 成员函数后，str 才会指向动态分配的存储空间，并且从此后其值不可能再为 NULL。在 String 对象的生存期内，有可能从未执行过 operator&#x3D; 成员函数，所以在析构函数中，在执行delete[] str之前，要先判断 str 是否为 NULL。</p>
+<p>第 9 行的函数返回了指向 String 对象内部动态分配的存储空间的指针，但是不希望外部得到这个指针后修改其指向的字符串的内容，因此将返回值设为 const char*。这样，假定 s 是 String 对象，那么下面两条语句编译时都会报错，s 对象内部的字符串就不会轻易地从外部被修改了 ：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char* p = s.c_str ();</span><br><span class="line">strcpy(s.c_str(), &quot;Tiangong1&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>第一条语句出错是因为&#x3D;左边是 char* 类型，右边是 const char * 类型，两边类型不匹配；第二条语句出错是因为 strcpy 函数的第一个形参是 char* 类型，而这里实参给出的却是 const char * 类型，同样类型不匹配。</p>
+<p>如果没有第 13 行对&#x3D;的重载，第 34 行的s &#x3D; “Good Luck,”肯定会因为类型不匹配而编译出错。经过重载后，第 34 行等价于s.operator&#x3D;(“Good Luck,”);，就没有问题了。</p>
+<p>在 operator&#x3D; 函数中，要先判断 str 是否已经指向动态分配的存储空间，如果是，则要先释放那片空间，然后重新分配一片空间，再将参数 s 指向的内容复制过去。这样，对象中存放的字符串就和 s 指向的字符串一样了。分配空间时，要考虑到字符串结尾的\0，因此分配的字节数要比 strlen(s) 多 1。</p>
+<p>需要注意一点，即使对&#x3D;做了重载，第 36 行的String s2 &#x3D; “hello!”;还是会编译出错，因为这是一条初始化语句，要用到构造函数，而不是赋值运算符&#x3D;。String 类没有编写参数类型为 char * 的构造函数，因此编译不能通过。</p>
+<p>就上面的程序而言，对 operator&#x3D; 函数的返回值类型没有什么特别要求，void 也可以。但是在对运算符进行重载时，好的风格是应该尽量保留运算符原本的特性，这样其他人在使用这个运算符时才不容易产生困惑。赋值运算符是可以连用的，这个特性在重载后也应该保持。即下面的写法应该合法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a = b = c;</span><br></pre></td></tr></table></figure>
+
+<p>假定 a、b、c 都是 String 对象，则上面的语句等价于下面的嵌套函数调用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a.operator=( b.operator=(c) );</span><br></pre></td></tr></table></figure>
+
+<p>如果 operator&#x3D; 函数的返回值类型为 void，显然上面这个嵌套函数调用就不能成立。将返回值类型改为 String 并且返回 *this 可以解决问题，但是还不够好。因为，假设 a、b、c 是基本类型的变量，则</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(a =b) = c;</span><br></pre></td></tr></table></figure>
+
+<p>这条语句执行的效果会使得 a 的值和 c 相等，即a &#x3D; b这个表达式的值其实是 a 的引用。为了保持&#x3D;的这个特性，operator&#x3D; 函数也应该返回其所作用的对象的引用。因此，返回值类型为 String &amp; 才是风格最好的写法。在 a、b、c 都是 String 对象时，(a&#x3D;b)&#x3D;c;等价于</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">( a.operator=(b) ).operator=(c);</span><br></pre></td></tr></table></figure>
+
+<p>a.operator&#x3D;(b) 返回对 a 的引用后，通过该引用继续调用 operator&#x3D;(c)，就会改变 a 的值。</p>
+<h3 id="3-C-深拷贝和浅拷贝（C-深复制和浅复制）"><a href="#3-C-深拷贝和浅拷贝（C-深复制和浅复制）" class="headerlink" title="3 C++深拷贝和浅拷贝（C++深复制和浅复制）"></a>3 C++深拷贝和浅拷贝（C++深复制和浅复制）</h3><p>同类对象之间可以通过赋值运算符&#x3D;互相赋值。如果没有经过重载，&#x3D;的作用就是把左边的对象的每个成员变量都变得和右边的对象相等，即执行逐个字节拷贝的工作，这种拷贝叫作“浅拷贝”。</p>
+<p>有的时候，两个对象相等，从实际应用的含义上来讲，指的并不应该是两个对象的每个字节都相同，而是有其他解释，这时就需要对&#x3D;进行重载。</p>
+<p>上节我们定义了 String 类，并重载了&#x3D;运算符，使得 char * 类型的字符串可以赋值给 String 类的对象。完整代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class String &#123;</span><br><span class="line">private:</span><br><span class="line">    char * str;</span><br><span class="line">public:</span><br><span class="line">    String() :str(NULL) &#123; &#125;</span><br><span class="line">    const char * c_str() const &#123; return str; &#125;;</span><br><span class="line">    String &amp; operator = (const char * s);</span><br><span class="line">    ~String();</span><br><span class="line">&#125;;</span><br><span class="line">String &amp; String::operator = (const char * s)</span><br><span class="line">//重载&quot;=&quot;以使得 obj = &quot;hello&quot;能够成立</span><br><span class="line">&#123;</span><br><span class="line">    if (str)</span><br><span class="line">        delete[] str;</span><br><span class="line">    if (s) &#123; //s不为NULL才会执行拷贝</span><br><span class="line">        str = new char[strlen(s) + 1];</span><br><span class="line">        strcpy(str, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">        str = NULL;</span><br><span class="line">    return *this;</span><br><span class="line">&#125;</span><br><span class="line">String::~String()</span><br><span class="line">&#123;</span><br><span class="line">    if (str)</span><br><span class="line">        delete[] str;</span><br><span class="line">&#125;;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    String s;</span><br><span class="line">    s = &quot;Good Luck,&quot;; //等价于 s.operator=(&quot;Good Luck,&quot;);</span><br><span class="line">    cout &lt;&lt; s.c_str() &lt;&lt; endl;</span><br><span class="line">    // String s2 = &quot;hello!&quot;; //这条语句要是不注释掉就会出错</span><br><span class="line">    s = &quot;Shenzhou 8!&quot;; //等价于 s.operator=(&quot;Shenzhou 8!&quot;);</span><br><span class="line">    cout &lt;&lt; s.c_str() &lt;&lt; endl;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对于上面的代码，如果让两个 String 对象相等（把一个对象赋值给另一个对象），其意义到底应该是什么呢？是两个对象的 str 成员变量都指向同一个地方，还是两个对象的 str 成员变量指向的内存空间中存放的内容相同？如果把 String 对象理解为存放字符串的对象，那应该是后者比较合理和符合习惯，而前者不但不符合习惯，还会导致程序漏洞。</p>
+<p>按照上面代码中 String 类的写法，下面的程序片段会引发问题：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String s1, s2;</span><br><span class="line">s1 = &quot;this&quot;;</span><br><span class="line">s2 = &quot;that&quot;;</span><br><span class="line">s2 = s1;</span><br></pre></td></tr></table></figure>
+
+<p>执行完上面的第 3 行后，s1 和 s2 的状态如图 1 (a) 所示，它们的 str 成员变量指向不同的存储空间。</p>
+<p><img src="C:\Users\刘\blog\source\img\20181226215243470" alt="img"></p>
+<p>2&#x3D;s1;执行的是浅拷贝。执行完s2&#x3D;s1;后，s2.str 和s1.str 指向同一个地方， 如图 1 (b) 所示。这导致 s2.str 原来指向的那片动态分配的存储空间再也不会被释放，变成内存垃圾。</p>
+<p>此外，s1 和 s2 消亡时都会执行delete[] str;，这就使得同一片存储空间被释放两次，会导致严重的内存错误，可能引发程序意外中止。</p>
+<p>而且，如果执行完s1&#x3D;s2;后 又执行s1 &#x3D; “some”;，则会导致 s2.str 也被释放。</p>
+<p>为解决上述问题，需要对做&#x3D;再次重载。重载后的的逻辑，应该是使得执行s2&#x3D;s1;后，s2.str 和 s1.str 依然指向不同的地方，但是这两处地方所存储的字符串是一样的。再次重载&#x3D;的写法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">String &amp; String::operator = (const String &amp; s)</span><br><span class="line">&#123;</span><br><span class="line">    if(str == s.str)</span><br><span class="line">        return * this;</span><br><span class="line">    if(str)</span><br><span class="line">        delete[] str;</span><br><span class="line">    if(s.str)&#123; //s. str不为NULL才执行复制操作</span><br><span class="line">        str = new char[ strlen(s.str) + 1 ];</span><br><span class="line">        strcpy(str, s.str);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">        str = NULL;</span><br><span class="line">    return * this;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>经过重载，赋值号<code>=</code>的功能不再是浅拷贝，而是将一个对象中<a target="_blank" rel="noopener" href="http://c.biancheng.net/c/pointer/">指针</a>成员变量指向的内容复制到另一个对象中指针成员变量指向的地方。这样的拷贝就叫“深拷贝”。</p>
+<p>程序第 3 行要判断 <strong>str&#x3D;&#x3D;s.str</strong>，是因为要应付如下的语句：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s1 = s1;</span><br></pre></td></tr></table></figure>
+
+<p>条语句本该不改变s1的值才对。s1&#x3D;s1;等价于s.operator&#x3D;(s1);，如果没有第 3 行和第 4 行，就会导致函数执行中的 str 和 s.str 完全是同一个指针（因为形参 s 引用了实参 s1，因此可以说 s 就是 s1）。第 8 行为 str 新分配一片存储空间，第 9 行从自己复制到自己，那么 str 指向的内容就不知道变成什么了。</p>
+<p>当然，程序员可能不会写s1&#x3D;s1;这样莫名奇妙的语句，但是可能会写rs1&#x3D;rs2;，如果 rs1 和 rs2 都是 String 类的引用，而且它们正好引用了同一个 String 对象，那么就等于发生了s1&#x3D;s1;这样的情况。</p>
+<p>思考题：上面的两个 operator&#x3D; 函数有什么可以改进以提高执行效率的地方？</p>
+<p>重载了两次&#x3D;的 String 类依然可能导致问题。因为没有编写复制构造函数，所以一旦出现使用复制构造函数初始化的 String 对象（例如，String 对象作为函数形参，或 String 对象作为函数返回值），就可能导致问题。最简单的可能出现问题的情况如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">String s2;</span><br><span class="line">s2 = &quot;Transformers&quot;;</span><br><span class="line">String s1(s2);</span><br></pre></td></tr></table></figure>
+
+<p>s1 是以 s2 作为实参，调用默认复制构造函数来初始化的。默认复制构造函数使得 s1.str 和 s2.str 指向同一个地方，即执行的是浅拷贝，这就导致了前面提到的没有对<code>=</code>进行第二次重载时产生的问题。因此还应该为 String 类编写如下复制构造函数，以完成深拷贝：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">String::String(String &amp; s)</span><br><span class="line">&#123;</span><br><span class="line">    if(s.str)&#123;</span><br><span class="line">        str = new char[ strlen(s.str) + 1 ];</span><br><span class="line">        strcpy(str, s.str);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">        str = NULL;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后，给出 String 类的完整代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line">class String &#123;</span><br><span class="line">private:</span><br><span class="line">    char * str;</span><br><span class="line">public:</span><br><span class="line">    String() :str(NULL) &#123; &#125;</span><br><span class="line">    String(String &amp; s);</span><br><span class="line">    const char * c_str() const &#123; return str; &#125;;</span><br><span class="line">    String &amp; operator = (const char * s);</span><br><span class="line">    String &amp; operator = (const String &amp; s);</span><br><span class="line">    ~String();</span><br><span class="line">&#125;;</span><br><span class="line">String::String(String &amp; s)</span><br><span class="line">&#123;</span><br><span class="line">    if (s.str) &#123;</span><br><span class="line">        str = new char[strlen(s.str) + 1];</span><br><span class="line">        strcpy(str, s.str);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">        str = NULL;</span><br><span class="line">&#125;</span><br><span class="line">String &amp; String::operator = (const String &amp; s)</span><br><span class="line">&#123;</span><br><span class="line">    if (str == s.str)</span><br><span class="line">        return *this;</span><br><span class="line">    if (str)</span><br><span class="line">        delete[] str;</span><br><span class="line">    if (s.str) &#123; //s. str不为NULL才执行复制操作</span><br><span class="line">        str = new char[strlen(s.str) + 1];</span><br><span class="line">        strcpy(str, s.str);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">        str = NULL;</span><br><span class="line">    return *this;</span><br><span class="line">&#125;</span><br><span class="line">String &amp; String::operator = (const char * s)</span><br><span class="line">//重载&quot;=&quot;以使得 obj = &quot;hello&quot;能够成立</span><br><span class="line">&#123;</span><br><span class="line">    if (str)</span><br><span class="line">        delete[] str;</span><br><span class="line">    if (s) &#123; //s不为NULL才会执行拷贝</span><br><span class="line">        str = new char[strlen(s) + 1];</span><br><span class="line">        strcpy(str, s);</span><br><span class="line">    &#125;</span><br><span class="line">    else</span><br><span class="line">        str = NULL;</span><br><span class="line">    return *this;</span><br><span class="line">&#125;</span><br><span class="line">String::~String()</span><br><span class="line">&#123;</span><br><span class="line">    if (str)</span><br><span class="line">        delete[] str;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-C-运算符重载为友元函数"><a href="#4-C-运算符重载为友元函数" class="headerlink" title="4 C++运算符重载为友元函数"></a>4 C++运算符重载为友元函数</h3><p>一般情况下，将运算符重载为类的成员函数是较好的选择。但有时，重载为成员函数不能满足使用要求，重载为全局函数又不能访问类的私有成员，因此需要将运算符重载为友元。</p>
+<p>例如，对于复数类 Complex 的对象，希望它能够和整型以及实数型数据做四则运算，假设 c 是 Complex 对象，希望c+5和5+c这两个表达式都能解释得通。</p>
+<p>将+重载为 Complex 类的成员函数能解释c+5，但是无法解释5+c。要让5+c有意义，则应对+进行再次重载，将其重载为一个全局函数。为了使该全局函数能访问 Complex 对象的私有成员，就应该将其声明为 Complex 类的友元。具体写法如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Complex</span><br><span class="line">&#123;</span><br><span class="line">    double real, imag;</span><br><span class="line">public:</span><br><span class="line">    Complex(double r, double i):real(r), imag(i)&#123;&#125;;</span><br><span class="line">    Complex operator + (double r);</span><br><span class="line">    friend Complex operator + (double r, const Complex &amp; c);</span><br><span class="line">&#125;;</span><br><span class="line">Complex Complex::operator + (double r)</span><br><span class="line">&#123; //能解释c+5</span><br><span class="line">    return Complex(real+r, imag);</span><br><span class="line">&#125;</span><br><span class="line">Complex operator + (double r, const Complex &amp; c)</span><br><span class="line">&#123; //能解释5+c</span><br><span class="line">    return Complex (c.real+r, c.imag);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-C-实现可变长度的动态数组"><a href="#5-C-实现可变长度的动态数组" class="headerlink" title="5 C++实现可变长度的动态数组"></a>5 C++实现可变长度的动态数组</h3><p>实践中经常碰到程序需要定义一个数组，但不知道定义多大合适的问题。按照最大的可能性定义，会造成空间浪费；定义小了则无法满足需要。</p>
+<p>如果用动态内存分配的方式解决，需要多少空间就动态分配多少，固然可以解决这个问题，但是要确保动态分配的内存在每一条执行路径上都能够被释放，也是一件头疼的事情。</p>
+<p>因此需要编写一个长度可变的数组类，该类的对象就能存放一个可变长数组。该数组类应该有以下特点：</p>
+<ul>
+<li>数组的元素个数可以在初始化该对象时指定。</li>
+<li>可以动态往数组中添加元素。</li>
+<li>使用该类时不用担心动态内存分配和释放问题。</li>
+<li>能够像使用数组那样使用动态数组类对象，如可以通过下标访问其元素。</li>
+</ul>
+<p>程序代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;cstring&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class CArray</span><br><span class="line">&#123;</span><br><span class="line">	int size; //数组元素的个数</span><br><span class="line">	int* ptr; //指向动态分配的数组</span><br><span class="line">public:</span><br><span class="line">	CArray(int s = 0); //s代表数组元素的个数</span><br><span class="line">	CArray(CArray &amp; a);</span><br><span class="line">	~CArray();</span><br><span class="line">	void push_back(int v); //用于在数组尾部添加一个元素 v</span><br><span class="line">	CArray &amp; operator = (const CArray &amp; a); //用于数组对象间的赋值</span><br><span class="line">	int length() const &#123; return size; &#125; //返回数组元素个数</span><br><span class="line">	int &amp; operator[](int i)</span><br><span class="line">	&#123; //用以支持根据下标访问数组元素，如“a[i]=4;”和“n=a[i];”这样的语句</span><br><span class="line">		return ptr[i];</span><br><span class="line">	&#125;;</span><br><span class="line">&#125;;</span><br><span class="line">CArray::CArray(int s) : size(s)</span><br><span class="line">&#123;</span><br><span class="line">	if (s == 0)</span><br><span class="line">		ptr = NULL;</span><br><span class="line">	else</span><br><span class="line">		ptr = new int[s];</span><br><span class="line">&#125;</span><br><span class="line">CArray::CArray(CArray &amp; a)</span><br><span class="line">&#123;</span><br><span class="line">	if (!a.ptr) &#123;</span><br><span class="line">		ptr = NULL;</span><br><span class="line">		size = 0;</span><br><span class="line">		return;</span><br><span class="line">	&#125;</span><br><span class="line">	ptr = new int[a.size];</span><br><span class="line">	memcpy(ptr, a.ptr, sizeof(int) * a.size);</span><br><span class="line">	size = a.size;</span><br><span class="line">&#125;</span><br><span class="line">CArray::~CArray()</span><br><span class="line">&#123;</span><br><span class="line">	if (ptr) delete[] ptr;</span><br><span class="line">&#125;</span><br><span class="line">CArray &amp; CArray::operator=(const CArray &amp; a)</span><br><span class="line">&#123; //赋值号的作用是使 = 左边对象中存放的数组的大小和内容都与右边的对象一样</span><br><span class="line">	if (ptr == a.ptr) //防止 a=a 这样的赋值导致出错</span><br><span class="line">		return *this;</span><br><span class="line">	if (a.ptr == NULL) &#123; //如果a里面的数组是空的</span><br><span class="line">		if (ptr)</span><br><span class="line">		delete[] ptr;</span><br><span class="line">		ptr = NULL;</span><br><span class="line">		size = 0;</span><br><span class="line">		return *this;</span><br><span class="line">	&#125;</span><br><span class="line">	if (size &lt; a.size) &#123; //如果原有空间够大，就不用分配新的空间</span><br><span class="line">		if (ptr)</span><br><span class="line">			delete[] ptr;</span><br><span class="line">		ptr = new int[a.size];</span><br><span class="line">	&#125;</span><br><span class="line">	memcpy(ptr, a.ptr, sizeof(int)*a.size);</span><br><span class="line">	size = a.size;</span><br><span class="line">	return *this;</span><br><span class="line">&#125;</span><br><span class="line">void CArray::push_back(int v)</span><br><span class="line">&#123; //在数组尾部添加一个元素</span><br><span class="line">	if (ptr) &#123;</span><br><span class="line">		int* tmpPtr = new int[size + 1]; //重新分配空间</span><br><span class="line">		memcpy(tmpPtr, ptr, sizeof(int) * size); //复制原数组内容</span><br><span class="line">		delete[] ptr;</span><br><span class="line">		ptr = tmpPtr;</span><br><span class="line">	&#125;</span><br><span class="line">	else //数组本来是空的</span><br><span class="line">		ptr = new int[1];</span><br><span class="line">	ptr[size++] = v; //加入新的数组元素</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	CArray a; //开始的数组是空的</span><br><span class="line">	for (int i = 0; i&lt;5; ++i)</span><br><span class="line">		a.push_back(i);</span><br><span class="line">	CArray a2, a3;</span><br><span class="line">	a2 = a;</span><br><span class="line">	for (int i = 0; i&lt;a.length(); ++i)</span><br><span class="line">		cout &lt;&lt; a2[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	a2 = a3; //a2 是空的</span><br><span class="line">	for (int i = 0; i&lt;a2.length(); ++i) //a2.length()返回 0</span><br><span class="line">		cout &lt;&lt; a2[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">	a[3] = 100;</span><br><span class="line">	CArray a4(a);</span><br><span class="line">	for (int i = 0; i&lt;a4.length(); ++i)</span><br><span class="line">		cout &lt;&lt; a4[i] &lt;&lt; &quot; &quot;;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序的输出结果为：</p>
+<p><strong>0 1 2 3 4</strong><br><strong>0 1 2 100 4</strong></p>
+<p>[]是双目运算符，有两个操作数，一个在里面，一个在外面。表达式 a[i] 等价于 a.operator<a href="i"></a>。按照[]原有的特性，a[i]应该能够作为左值使用，因此 operator[] 函数应该返回引用。</p>
+<h3 id="6-C-重载-lt-lt-和-gt-gt-（C-重载输出运算符和输入运算符）"><a href="#6-C-重载-lt-lt-和-gt-gt-（C-重载输出运算符和输入运算符）" class="headerlink" title="6 C++重载&lt;&lt;和&gt;&gt;（C++重载输出运算符和输入运算符）"></a>6 C++重载&lt;&lt;和&gt;&gt;（C++重载输出运算符和输入运算符）</h3><p>在 C++ 中，左移运算符&lt;&lt;可以和 cout 一起用于输出，因此也常被称为“流插入运算符”或者“输出运算符”。实际上，&lt;&lt;本来没有这样的功能，之所以能和 cout 一起使用，是因为被重载了。</p>
+<p>cout 是 ostream 类的对象。ostream 类和 cout 都是在头文件 <iostream> 中声明的。ostream 类将&lt;&lt;重载为成员函数，而且重载了多次。为了使cout&lt;&lt;”Star War”能够成立，ostream 类需要将&lt;&lt;进行如下重载：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ostream &amp; ostream::operator &lt;&lt; (const char* s)</span><br><span class="line">&#123;</span><br><span class="line">    //输出s的代码</span><br><span class="line">    return * this;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>为了使<code>cout&lt;&lt;5;</code>能够成立，ostream 类还需要将<code>&lt;&lt;</code>进行如下重载：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ostream &amp; ostream::operator &lt;&lt; (int n)</span><br><span class="line">&#123;</span><br><span class="line">    //输出n的代码</span><br><span class="line">    return *this;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>重载函数的返回值类型为 ostream 的引用，并且函数返回 *this，就使得<code>cout&lt;&lt;&quot;Star War&quot;&lt;&lt;5</code>能够成立。有了上面的重载，<code>cout&lt;&lt;&quot;Star War&quot;&lt;&lt;5;</code>就等价于：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">( cout.operator&lt;&lt;(&quot;Star War&quot;) ).operator&lt;&lt;(5);</span><br></pre></td></tr></table></figure>
+
+<p>重载函数返回 *this，使得cout&lt;&lt;”Star War”这个表达式的值依然是 cout（说得更准确一点就是 cout 的引用，等价于 cout），所以能够和&lt;&lt;5继续进行运算。</p>
+<p>cin 是 istream 类的对象，是在头文件 <iostream> 中声明的。istream 类将&gt;&gt;重载为成员函数，因此 cin 才能和&gt;&gt;连用以输入数据。一般也将&gt;&gt;称为“流提取运算符”或者“输入运算符”。</p>
+<p>例题：假定 c 是 Complex 复数类的对象，现在希望写cout&lt;&lt;c;就能以 a+bi 的形式输出 c 的值；写cin&gt;&gt;c;就能从键盘接受 a+bi 形式的输入，并且使得 c.real &#x3D; a, c.imag &#x3D; b。</p>
+<p>显然，要对&lt;&lt;和&gt;&gt;进行重载，程序如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;string&gt;</span><br><span class="line">#include &lt;cstdlib&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class Complex</span><br><span class="line">&#123;</span><br><span class="line">	double real,imag;</span><br><span class="line">public:</span><br><span class="line">	Complex( double r=0, double i=0):real(r),imag(i)&#123; &#125;;</span><br><span class="line">	friend ostream &amp; operator&lt;&lt;( ostream &amp; os,const Complex &amp; c);</span><br><span class="line">	friend istream &amp; operator&gt;&gt;( istream &amp; is,Complex &amp; c);</span><br><span class="line">&#125;;</span><br><span class="line">ostream &amp; operator&lt;&lt;( ostream &amp; os,const Complex &amp; c)</span><br><span class="line">&#123;</span><br><span class="line">	os &lt;&lt; c.real &lt;&lt; &quot;+&quot; &lt;&lt; c.imag &lt;&lt; &quot;i&quot;; //以&quot;a+bi&quot;的形式输出</span><br><span class="line">	return os;</span><br><span class="line">&#125;</span><br><span class="line">istream &amp; operator&gt;&gt;( istream &amp; is,Complex &amp; c)</span><br><span class="line">&#123;</span><br><span class="line">	string s;</span><br><span class="line">	is &gt;&gt; s; //将&quot;a+bi&quot;作为字符串读入, &quot;a+bi&quot; 中间不能有空格</span><br><span class="line">	int pos = s.find(&quot;+&quot;,0);</span><br><span class="line">	string sTmp = s.substr(0,pos); //分离出代表实部的字符串</span><br><span class="line">	c.real = atof(sTmp.c_str());//atof库函数能将const char*指针指向的内容转换成 float</span><br><span class="line">	sTmp = s.substr(pos+1, s.length()-pos-2); //分离出代表虚部的字符串</span><br><span class="line">	c.imag = atof(sTmp.c_str());</span><br><span class="line">	return is;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Complex c;</span><br><span class="line">	int n;</span><br><span class="line">	cin &gt;&gt; c &gt;&gt; n;</span><br><span class="line">	cout &lt;&lt; c &lt;&lt; &quot;,&quot; &lt;&lt; n;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序的运行结果：</p>
+<p><strong>13.2+133i 87</strong><br><strong>13.2+133i,87</strong></p>
+<p>因为没有办法修改 ostream 类和 istream 类，所以只能将&lt;&lt;和&gt;&gt;重载为全局函数的形式。由于这两个函数需要访问 Complex 类的私有成员，因此在 Complex 类定义中将它们声明为友元。</p>
+<p>cout&lt;&lt;c会被解释成operator&lt;&lt;(cout, c)，因此编写 operator&lt;&lt; 函数时，它的两个参数就不难确定了。</p>
+<p>第 13 行，参数 os 只能是 ostream 的引用，而不能是 ostream 对象，因为 ostream 的复制构造函数是私有的，没有办法生成 ostream 参数对象。operator&lt;&lt; 函数的返回值类型设为 ostream &amp;，并且返回 os，就能够实现&lt;&lt;的连续使用，如cout&lt;&lt;c&lt;&lt;5。在本程序中，执行第 34 行的cout&lt;&lt;c进入 operator&lt;&lt; 后，os 引用的就是 cout，因此第 34 行就能产生输出。</p>
+<p>用 cin 读入复数时，对应的输入必须是 a+bi 的格式，而且中间不能有空格，如输入 13.2+33.4i。第 21 行的is&gt;&gt;s;读入一个字符串。假定输入的格式没有错误，那么被读入 s  的就是 a+bi 格式的字符串。</p>
+<p>读入后需要将字符串中的实部 a 和虚部 b 分离出来，分离的办法就是找出被+隔开的两个子串，然后将两个字符串转换成浮点数。第 24 行调用了标准库函数 atof 来将字符串转换为浮点数。该函数的原型是float atof(const char *)，它在 <cstdlib> 头文件中声明。</p>
+<h3 id="7-C-重载-（强制类型转换运算符）"><a href="#7-C-重载-（强制类型转换运算符）" class="headerlink" title="7 C++重载()（强制类型转换运算符）"></a>7 C++重载()（强制类型转换运算符）</h3><p>在 C++ 中，类型的名字（包括类的名字）本身也是一种运算符，即类型强制转换运算符。</p>
+<p>类型强制转换运算符是单目运算符，也可以被重载，但只能重载为成员函数，不能重载为全局函数。经过适当重载后，(类型名)对象这个对对象进行强制类型转换的表达式就等价于对象.operator 类型名()，即变成对运算符函数的调用。</p>
+<p>下面的程序对 double 类型强制转换运算符进行了重载。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class Complex</span><br><span class="line">&#123;</span><br><span class="line">    double real, imag;</span><br><span class="line">public:</span><br><span class="line">    Complex(double r = 0, double i = 0) :real(r), imag(i) &#123;&#125;;</span><br><span class="line">    operator double() &#123; return real; &#125; //重载强制类型转换运算符 double</span><br><span class="line">&#125;;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">    Complex c(1.2, 3.4);</span><br><span class="line">    cout &lt;&lt; (double)c &lt;&lt; endl; //输出 1.2</span><br><span class="line">    double n = 2 + c; //等价于 double n = 2 + c. operator double()</span><br><span class="line">    cout &lt;&lt; n; //输出 3.2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>程序的输出结果是：</p>
+<p><strong>1.2</strong><br><strong>3.2</strong></p>
+<p>第 8 行对 double 运算符进行了重载。重载强制类型转换运算符时，不需要指定返回值类型，因为返回值类型是确定的，就是运算符本身代表的类型，在这里就是 double。</p>
+<p>重载后的效果是，第 13 行的(double)c等价于c.operator double()。</p>
+<p>有了对 double 运算符的重载，在本该出现 double 类型的变量或常量的地方，如果出现了一个 Complex 类型的对象，那么该对象的 operator double 成员函数就会被调用，然后取其返回值使用。</p>
+<p>例如第 14 行，编译器认为本行中c这个位置如果出现的是 double 类型的数据，就能够解释得通，而 Complex 类正好重载了 double 运算符，因而本行就等价于：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">double n = 2 + c.operator double();</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-C-重载-和–（自增和自减运算符）"><a href="#8-C-重载-和–（自增和自减运算符）" class="headerlink" title="8 C++重载++和–（自增和自减运算符）"></a>8 C++重载++和–（自增和自减运算符）</h3><p>自增运算符<code>++</code>、自减运算符<code>--</code>都可以被重载，但是它们有前置、后置之分。</p>
+<p>以<code>++</code>为例，假设 obj 是一个 CDemo 类的对象，<code>++obj</code>和<code>obj++</code>本应该是不一样的，前者的返回值应该是 obj 被修改后的值，而后者的返回值应该是 obj 被修改前的值。如果如下重载<code>++</code>运算符：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CDemo &amp; CDemo::operator ++ ()</span><br><span class="line">&#123;</span><br><span class="line">    //...</span><br><span class="line">    return * this;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么不论obj++还是++obj，都等价于obj.operator++()无法体现出差别。</p>
+<p>为了解决这个问题，C++ 规定，在重载++或–时，允许写一个增加了无用 int 类型形参的版本，编译器处理++或–前置的表达式时，调用参数个数正常的重载函数；处理后置表达式时，调用多出一个参数的重载函数。来看下面的例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line">class CDemo &#123;</span><br><span class="line">private:</span><br><span class="line">	int n;</span><br><span class="line">public:</span><br><span class="line">	CDemo(int i=0):n(i) &#123; &#125;</span><br><span class="line">	CDemo &amp; operator++(); //用于前置形式</span><br><span class="line">	CDemo operator++( int ); //用于后置形式</span><br><span class="line">	operator int ( ) &#123; return n; &#125;</span><br><span class="line">	friend CDemo &amp; operator--(CDemo &amp; );</span><br><span class="line">	friend CDemo operator--(CDemo &amp; ,int);</span><br><span class="line">&#125;;</span><br><span class="line">CDemo &amp; CDemo::operator++()</span><br><span class="line">&#123;//前置 ++</span><br><span class="line">	n ++;</span><br><span class="line">	return * this;</span><br><span class="line">&#125;</span><br><span class="line">CDemo CDemo::operator++(int k )</span><br><span class="line">&#123; //后置 ++</span><br><span class="line">	CDemo tmp(*this); //记录修改前的对象</span><br><span class="line">	n++;</span><br><span class="line">	return tmp; //返回修改前的对象</span><br><span class="line">&#125;</span><br><span class="line">CDemo &amp; operator--(CDemo &amp; d)</span><br><span class="line">&#123;//前置--</span><br><span class="line">	d.n--;</span><br><span class="line">	return d;</span><br><span class="line">&#125;</span><br><span class="line">CDemo operator--(CDemo &amp; d,int)</span><br><span class="line">&#123;//后置--</span><br><span class="line">	CDemo tmp(d);</span><br><span class="line">	d.n --;</span><br><span class="line">	return tmp;</span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	CDemo d(5);</span><br><span class="line">	cout &lt;&lt; (d++ ) &lt;&lt; &quot;,&quot;; //等价于 d.operator++(0);</span><br><span class="line">	cout &lt;&lt; d &lt;&lt; &quot;,&quot;;</span><br><span class="line">	cout &lt;&lt; (++d) &lt;&lt; &quot;,&quot;; //等价于 d.operator++();</span><br><span class="line">	cout &lt;&lt; d &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; (d-- ) &lt;&lt; &quot;,&quot;; //等价于 operator-(d,0);</span><br><span class="line">	cout &lt;&lt; d &lt;&lt; &quot;,&quot;;</span><br><span class="line">	cout &lt;&lt; (--d) &lt;&lt; &quot;,&quot;; //等价于 operator-(d);</span><br><span class="line">	cout &lt;&lt; d &lt;&lt; endl;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>程序运行结果:</p>
+<p><strong>5,6,7,7</strong><br><strong>7,6,5,5</strong></p>
+<p>本程序将++重载为成员函数，将–重载为全局函数。其实都重载为成员函数更好，这里将–重载为全局函数只是为了说明可以这么做而已。</p>
+<p>调用后置形式的重载函数时，对于那个没用的 int 类型形参，编译器自动以 0 作为实参。 如第 39 行，d++等价于d.operator++(0)。</p>
+<p>对比前置++和后置++运算符的重载可以发现，后置++运算符的执行效率比前置的低。因为后置方式的重载函数中要多生成一个局部对象 tmp（第21行），而对象的生成会引发构造函数调用，需要耗费时间。同理，后置–运算符的执行效率也比前置的低。</p>
+<p>前置++运算符的返回值类型是 CDemo &amp;，而后置++运算符的返回值类型是 CDemo，这是因为运算符重载最好保持原运算符的用法。C++ 固有的前置++运算符的返回值本来就是操作数的引用，而后置++运算符的返回值则是操作数值修改前的复制品。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int a = 5;</span><br><span class="line">(++a) = 2;</span><br></pre></td></tr></table></figure>
+
+<p>上面两条语句执行后，a 的值是 2，因为 ++a 的返回值是 a 的引用。而</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(a++) = 2;</span><br></pre></td></tr></table></figure>
+
+<p>这条语句是非法的，因为 a++ 的返回值不是引用，不能作为左值。</p>
+<p>–运算符的返回值类型的设定和++运算符一样。</p>
+<p>在有的编译器（如Visual Studio）中，如果没有后置形式的重载，则后置形式的自增或自减表达式也被当作前置形式处理。而在有的编译器（如Dev C++）中，不进行后置形式的重载，则后置形式的表达式就会编译出错。</p>
+<h2 id="9-C-运算符重载注意事项以及汇总"><a href="#9-C-运算符重载注意事项以及汇总" class="headerlink" title="9 C++运算符重载注意事项以及汇总"></a>9 C++运算符重载注意事项以及汇总</h2><p>在 C++ 中进行运算符重载时，有以下问题需要注意：</p>
+<ul>
+<li><p>重载后运算符的含义应该符合原有用法习惯。例如重载+运算符，完成的功能就应该类似于做加法，在重载的+运算符中做减法是不合适的。此外，重载应尽量保留运算符原有的特性。</p>
+</li>
+<li><p>C++ 规定，运算符重载不改变运算符的优先级。</p>
+</li>
+<li><p>以下运算符不能被重载：.、.*、::、? :、sizeof。</p>
+</li>
+<li><p>重载运算符()、[]、-&gt;、或者赋值运算符&#x3D;时，只能将它们重载为成员函数，不能重载为全局函数。</p>
+</li>
+</ul>
+<p>运算符重载的实质是将运算符重载为一个函数，使用运算符的表达式就被解释为对重载函数的调用。</p>
+<p>运算符可以重载为全局函数。此时函数的参数个数就是运算符的操作数个数，运算符的操作数就成为函数的实参。</p>
+<p>运算符也可以重载为成员函数。此时函数的参数个数就是运算符的操作数个数减一，运算符的操作数有一个成为函数作用的对象，其余的成为函数的实参。</p>
+<p>必要时需要重载赋值运算符&#x3D;，以避免两个对象内部的指针指向同一片存储空间。</p>
+<p>运算符可以重载为全局函数，然后声明为类的友元。</p>
+<p>&lt;&lt;和&gt;&gt;是在 iostream 中被重载，才成为所谓的“流插入运算符”和“流提取运算符”的。</p>
+<p>类型的名字可以作为强制类型转换运算符，也可以被重载为类的成员函数。它能使得对象被自动转换为某种类型。</p>
+<p>自增、自减运算符各有两种重载方式，用于区别前置用法和后置用法。</p>
+<p>运算符重载不改变运算符的优先级。重载运算符时，应该尽量保留运算符原本的特性。</p>
+
+    
+
+    
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/weixin.jpg">
+                    <span class="reward-type">微信</span>
+                  </div>
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
+
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          voidvoid2004
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="http://example.com/2023/02/02/2023-2-2-运算符重载/" title="运算符重载" target="_blank">http://example.com/2023/02/02/2023-2-2-运算符重载/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
           
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
+    
+
+  </div>
+  <div class="article-info article-info-index">
+    
+    
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">python</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">c++</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
+    
 
     
+
+    
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2023/02/02/2023-2-2-%E8%BF%90%E7%AE%97%E7%AC%A6%E9%87%8D%E8%BD%BD/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+
+    
+    <div class="clearfix"></div>
+  </div>
+  </div>
+</article>
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2023/01/28/2023-1-28-python%E6%A8%A1%E5%9D%97%E7%9A%84%E5%AF%BC%E5%85%A5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">python模块的导入</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
           </div>
@@ -233,9 +590,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
